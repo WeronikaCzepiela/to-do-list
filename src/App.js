@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import GitHub from './images/GitHub.png'
 import LinkdedIn from './images/LinkedIn.png'
 
