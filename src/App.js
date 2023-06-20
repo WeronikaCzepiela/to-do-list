@@ -12,7 +12,8 @@ const App = () => {
             </div>
             <div className={'List'}>
             </div>
-            <div className={'add-Button'}>
+            <div className={'add-Text'}>
+                <textarea className={'enter-text'} placeholder={'Wpisz nazwę zadania'}></textarea>
                 <button>Dodaj</button>
             </div>
             <div className={'bottom'}>
