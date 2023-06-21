@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap');
+
+$done-button: #482121;
+$to-do-button: #7A3E3E;
+$text: #FFFFFF;
+
+.list {
+  display: flex;
+  flex-direction: row;
+  width: 534px;
+  height: auto;
+  background-color: $to-do-button;
+  font-family: Roboto;
+  font-size: 24px;
+  color: $text;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  padding-left: 36px;
+}
+
+.trash {
+  padding-right: 9px;
+}

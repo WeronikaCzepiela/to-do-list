@@ -17,9 +17,10 @@ button {
   box-shadow: 0px 4px 4px 0px #00000040;
   border: none;
   margin-top: 25px;
+  cursor: pointer;
 }
 
-.form {
+#form {
   display: flex;
   flex-direction: column;
 }

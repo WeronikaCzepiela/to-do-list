@@ -1,10 +1,16 @@
 import './Form.scss'
+import { useState } from 'react'
 
-export const Form = () => {
+export const Form = ({ addNewListItem }) => {
+  const [text, setText] = useState('')
+
   return (
-    <div className={'form'}>
-      <input className={'enter-text'} placeholder={'Wpisz nazwę zadania'}></input>
-      <button>Dodaj</button>
+    <div id={'form'}>
+      <input
+        value={text}
+        onInput={(e) => setText(e.target.value)}
+        placeholder={'Wpisz nazwę zadania'}></input>
+      <button onClick={() => addNewListItem(text)}>Dodaj</button>
     </div>
   )
 }
