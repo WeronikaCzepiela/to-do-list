@@ -8,7 +8,14 @@ import { useState } from 'react'
 const App = () => {
   const [toDoList, setToDoList] = useState([{ id: 1, name: 'First', isDone: false }])
   const addNewListItem = (text) => {
-    // TODO
+    setToDoList([
+      ...toDoList,
+      {
+        id: Date.now(),
+        name: text,
+        isDone: false,
+      },
+    ])
   }
 
   const removeListItem = (id) => {

@@ -1,8 +1,17 @@
 import './List.scss'
-import { useState } from 'react'
 
-export const List = ({ text, complete }) => {
-  // const handleOnClick = () => {
-  //   toDoList
-  // }
+export const List = ({ items, removeListItem, changeListItemState }) => {
+  return (
+    <>
+      items.map((toDoItem) =>
+      <ListItem
+        id={toDoItem.id}
+        text={toDoItem.name}
+        isDone={toDoItem.isDone}
+        removeListItem={removeListItem}
+        changeListItemState={changeListItemState}
+      />
+      )
+    </>
+  )
 }
