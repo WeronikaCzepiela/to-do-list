@@ -4,7 +4,7 @@ $done-button: #482121;
 $to-do-button: #7A3E3E;
 $text: #FFFFFF;
 
-.list {
+.item {
   display: flex;
   flex-direction: row;
   width: 534px;
@@ -16,12 +16,21 @@ $text: #FFFFFF;
   border-radius: 16px;
   align-items: center;
   justify-content: space-between;
+  inline-size: 534px;
+  word-break: break-all;
 }
 
 .text {
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .trash {
+  cursor: pointer;
   padding-right: 9px;
+}
+
+.item-done {
+  background-color: $done-button;
+  text-decoration: line-through;
 }

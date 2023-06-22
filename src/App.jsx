@@ -6,7 +6,7 @@ import { List } from './components/ToDoList/List/List'
 import { useState } from 'react'
 
 const App = () => {
-  const [toDoList, setToDoList] = useState([{ id: 1, name: 'First', isDone: false }])
+  const [toDoList, setToDoList] = useState([{ id: 1, name: 'first', isDone: false }])
   const addNewListItem = (text) => {
     setToDoList([
       ...toDoList,
@@ -19,11 +19,22 @@ const App = () => {
   }
 
   const removeListItem = (id) => {
-    // TODO
+    setToDoList(toDoList.filter((element) => element.id !== id))
   }
 
   const changeListItemState = (id) => {
-    // TODO
+    setToDoList(
+      toDoList.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            isDone: !item.isDone,
+          }
+        }
+
+        return item
+      }),
+    )
   }
 
   return (
