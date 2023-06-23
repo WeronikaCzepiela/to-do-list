@@ -8,14 +8,16 @@ import { useState } from 'react'
 const App = () => {
   const [toDoList, setToDoList] = useState([{ id: 1, name: 'first', isDone: false }])
   const addNewListItem = (text) => {
-    setToDoList([
-      ...toDoList,
-      {
-        id: Date.now(),
-        name: text,
-        isDone: false,
-      },
-    ])
+    if (text !== '') {
+      setToDoList([
+        ...toDoList,
+        {
+          id: Date.now(),
+          name: text,
+          isDone: false,
+        },
+      ])
+    }
   }
 
   const removeListItem = (id) => {

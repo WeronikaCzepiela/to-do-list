@@ -1,6 +1,5 @@
 import './Form.scss'
-import { useState } from 'react'
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Form = ({ addNewListItem }) => {
   const [text, setText] = useState('')
@@ -8,8 +7,13 @@ export const Form = ({ addNewListItem }) => {
   const handleKeypress = (e) => {
     //it triggers by pressing the enter key
     if (e.keyCode === 13) {
-      addNewListItem(text)
+      addListItemAndResetTextInInput(text)
     }
+  }
+
+  const addListItemAndResetTextInInput = (text) => {
+    addNewListItem(text)
+    setText('')
   }
 
   return (
@@ -19,7 +23,7 @@ export const Form = ({ addNewListItem }) => {
         onInput={(e) => setText(e.target.value)}
         placeholder={'Wpisz nazwę zadania'}
         onKeyDown={handleKeypress}></input>
-      <button onClick={() => addNewListItem(text)}>Dodaj</button>
+      <button onClick={() => addListItemAndResetTextInInput(text)}>Dodaj</button>
     </div>
   )
 }

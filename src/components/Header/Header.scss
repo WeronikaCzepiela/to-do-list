@@ -8,6 +8,8 @@ $add-button: #47A992;
   background-color: $add-button;
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
 }
 
 h1 {
