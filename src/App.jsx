@@ -6,37 +6,47 @@ import { List } from './components/ToDoList/List/List'
 import { useState } from 'react'
 
 const App = () => {
-  const [toDoList, setToDoList] = useState([{ id: 1, name: 'first', isDone: false }])
+  const [toDoList, setToDoList] = useState(JSON.parse(window.localStorage.getItem('toDoList')))
+  const helpersStorageToDOList = (list) => {
+    window.localStorage.setItem('toDoList', JSON.stringify(list))
+  }
   const addNewListItem = (text) => {
+    const newList = [
+      ...toDoList,
+      {
+        id: Date.now(),
+        name: text,
+        isDone: false,
+      },
+    ]
     if (text !== '') {
-      setToDoList([
-        ...toDoList,
-        {
-          id: Date.now(),
-          name: text,
-          isDone: false,
-        },
-      ])
+      setToDoList(newList)
+      helpersStorageToDOList(newList)
     }
   }
 
+  // window.localStorage.setItem('toDoList', JSON.stringify(toDoList))
+
   const removeListItem = (id) => {
-    setToDoList(toDoList.filter((element) => element.id !== id))
+    const newList = toDoList.filter((element) => element.id !== id)
+    setToDoList(newList)
+    helpersStorageToDOList(newList)
   }
 
   const changeListItemState = (id) => {
-    setToDoList(
-      toDoList.map((item) => {
-        if (item.id === id) {
-          return {
-            ...item,
-            isDone: !item.isDone,
-          }
+    const newList = toDoList.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          isDone: !item.isDone,
         }
+      }
 
-        return item
-      }),
-    )
+      return item
+    })
+
+    setToDoList(newList)
+    helpersStorageToDOList(newList)
   }
 
   return (
