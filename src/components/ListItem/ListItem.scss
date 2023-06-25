@@ -34,3 +34,23 @@ $text: #FFFFFF;
   background-color: $done-button;
   text-decoration: line-through;
 }
+
+@media (max-width: 500px) {
+  .item {
+    width: 320px;
+    font-size: 16px;
+  }
+
+  .text {
+    padding-left: 20px;
+  }
+
+  .trash {
+    padding-right: 9px;
+  }
+
+  img {
+    width: 33px;
+    height: 35px;
+  }
+}
