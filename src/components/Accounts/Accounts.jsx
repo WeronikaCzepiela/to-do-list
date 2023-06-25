@@ -5,7 +5,7 @@ import './Accounts.scss'
 export const Accounts = () => {
   return (
     <div className={'accounts'}>
-      <p>Check my accounts</p>
+      <p>Sprawdź moje konta</p>
       <a target={'_blank'} href={'https://github.com/WeronikaCzepiela'}>
         {' '}
         <img src={GitHub} />{' '}
