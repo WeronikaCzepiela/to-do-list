@@ -1,5 +1,7 @@
 import './Form.scss'
 import React, { useState } from 'react'
+import { initReactI18next } from 'react-i18next'
+import i18n from 'i18next'
 
 export const Form = ({ addNewListItem }) => {
   const [text, setText] = useState('')

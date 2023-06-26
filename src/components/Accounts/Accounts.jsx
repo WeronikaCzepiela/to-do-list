@@ -1,6 +1,8 @@
 import GitHub from './images/GitHub.png'
 import LinkdedIn from './images/LinkedIn.png'
 import './Accounts.scss'
+import { initReactI18next } from 'react-i18next'
+import i18n from 'i18next'
 
 export const Accounts = () => {
   return (
