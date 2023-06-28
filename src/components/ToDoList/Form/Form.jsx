@@ -1,7 +1,6 @@
 import './Form.scss'
 import React, { useState } from 'react'
-import { initReactI18next } from 'react-i18next'
-import i18n from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 export const Form = ({ addNewListItem }) => {
   const [text, setText] = useState('')
@@ -18,14 +17,16 @@ export const Form = ({ addNewListItem }) => {
     setText('')
   }
 
+  const { t } = useTranslation()
+
   return (
     <div id={'form'}>
       <input
         value={text}
         onInput={(e) => setText(e.target.value)}
-        placeholder={'Wpisz nazwę zadania'}
+        placeholder={t('form')}
         onKeyDown={handleKeypress}></input>
-      <button onClick={() => addListItemAndResetTextInInput(text)}>Dodaj</button>
+      <button onClick={() => addListItemAndResetTextInInput(text)}>{t('button')}</button>
     </div>
   )
 }

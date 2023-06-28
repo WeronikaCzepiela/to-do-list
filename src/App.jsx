@@ -4,6 +4,7 @@ import { Accounts } from './components/Accounts/Accounts'
 import { Form } from './components/ToDoList/Form/Form'
 import { List } from './components/ToDoList/List/List'
 import { useState } from 'react'
+import './utils/i18n.config'
 
 const App = () => {
   const [toDoList, setToDoList] = useState(JSON.parse(window.localStorage.getItem('toDoList')))
