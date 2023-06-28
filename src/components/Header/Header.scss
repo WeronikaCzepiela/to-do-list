@@ -18,10 +18,27 @@ h1 {
   font-size: 85px;
   margin: 0;
   color: $background-color;
+  justify-items: center;
 }
 
 @media (max-width: 500px) {
   h1 {
     font-size: 40px;
   }
+}
+
+#language {
+  position: absolute;
+  width: 48px;
+  height: 36px;
+  align-self: center;
+  right: 20px;
+}
+
+.pl {
+  background-image: url(./images/pl.png);
+}
+
+.en {
+  background-image: url(./images/en.png);
 }
