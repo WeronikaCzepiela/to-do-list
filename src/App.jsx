@@ -26,8 +26,6 @@ const App = () => {
     }
   }
 
-  // window.localStorage.setItem('toDoList', JSON.stringify(toDoList))
-
   const removeListItem = (id) => {
     const newList = toDoList.filter((element) => element.id !== id)
     setToDoList(newList)
