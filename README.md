@@ -36,3 +36,7 @@ In addition, at the bottom of the web page there are references to the author's 
 
 <img src="./images/mobile.png"/>
 
+## How to run?
+
+`npm run start` to start project 
+
