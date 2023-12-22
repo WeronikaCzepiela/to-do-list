@@ -22,7 +22,8 @@ const App = () => {
     ]
     if (text !== '') {
       setToDoList(newList)
-      helpersStorageToDOList(newList)
+      helpersStorageToDOList(newList) 
+console.log(new List) 
     }
   }
 
