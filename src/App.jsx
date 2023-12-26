@@ -46,6 +46,7 @@ const App = () => {
 
     setToDoList(newList)
     helpersStorageToDOList(newList)
+console.log(newList)
   }
 
   return (
