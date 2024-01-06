@@ -39,4 +39,3 @@ In addition, at the bottom of the web page there are references to the author's 
 ## How to run?
 
 `npm run start` to start project 
-
