@@ -2,6 +2,11 @@
 
 A web application that allows users to create their own task list.
 
+## See the website
+
+[Link](https://weronikaczepiela.github.io/to-do-list/)
+
+
 ## Description
 
 The web application allows you to create your own 'to do' list. The entire site is available in Polish and English - depending on the user's choice. The form allows the user to add a new task. Then a new block appears with the previously entered content. Clicking on a given block crosses out the text and changes the color of the block. This suggests that the task has been completed. You can also click the trash can icon. Then the task completely disappears from the list.
