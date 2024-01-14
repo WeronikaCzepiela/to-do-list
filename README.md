@@ -4,6 +4,7 @@ A web application that allows users to create their own task list.
 
 ## See the website
 
+Click to see the website
 [Link](https://weronikaczepiela.github.io/to-do-list/)
 
 
