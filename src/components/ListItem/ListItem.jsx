@@ -15,7 +15,7 @@ export const ListItem = ({ id, text, isDone, removeListItem, changeListItemState
         <p>{text}</p>
       </div>
       <div className={'trash'} onClick={handleOnRemove}>
-        <img src={Trash} />
+        <img src={Trash} alt={'trash_bin'} />
       </div>
     </div>
   )
