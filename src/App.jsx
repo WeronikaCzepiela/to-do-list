@@ -8,9 +8,11 @@ import './utils/i18n.config'
 
 const App = () => {
   const [toDoList, setToDoList] = useState(JSON.parse(window.localStorage.getItem('toDoList')))
+
   const helpersStorageToDOList = (list) => {
     window.localStorage.setItem('toDoList', JSON.stringify(list))
   }
+
   const addNewListItem = (text) => {
     const newList = [
       ...toDoList,
