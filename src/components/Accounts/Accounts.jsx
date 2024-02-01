@@ -9,13 +9,11 @@ export const Accounts = () => {
   return (
     <div className={'accounts'}>
       <p>{t('accounts')}</p>
-      <a target={'_blank'} href={'https://github.com/WeronikaCzepiela'}>
-        {' '}
-        <img src={GitHub} />{' '}
+      <a target={'_blank'} href={'https://github.com/WeronikaCzepiela'} rel='noopener'>
+        <img src={GitHub} alt='GitHub_img' />
       </a>
-      <a target={'_blank'} href={'https://www.linkedin.com/in/--weronika-czepiela/'}>
-        {' '}
-        <img src={LinkdedIn} />
+      <a target={'_blank'} href={'https://www.linkedin.com/in/--weronika-czepiela/'} rel='noopener'>
+        <img src={LinkdedIn} alt='LinkedIn_img' />
       </a>
     </div>
   )
