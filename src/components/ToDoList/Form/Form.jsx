@@ -22,10 +22,17 @@ export const Form = ({ addNewListItem }) => {
     <div id={'form'}>
       <input
         value={text}
-        onInput={(e) => setText(e.target.value)}
+        onInput={(e) => {
+          setText(e.target.value)
+        }}
         placeholder={t('form')}
         onKeyDown={handleKeypress}></input>
-      <button onClick={(text) => addListItemAndResetTextInInput(text)}>{t('button')}</button>
+      <button
+        onClick={() => {
+          addListItemAndResetTextInInput(text)
+        }}>
+        {t('button')}
+      </button>
     </div>
   )
 }
