@@ -7,6 +7,7 @@ export const List = ({ items, removeListItem, changeListItemState }) => {
       {items
         ? items.map((toDoItem) => (
             <ListItem
+              key={toDoItem.id}
               id={toDoItem.id}
               text={toDoItem.name}
               isDone={toDoItem.isDone}
