@@ -7,7 +7,13 @@ import { useState } from 'react'
 import './utils/i18n.config'
 
 const App = () => {
-  const [toDoList, setToDoList] = useState(JSON.parse(window.localStorage.getItem('toDoList')))
+  const getCorrectNewValue = () => {
+    const toDOListFromPast = JSON.parse(window.localStorage.getItem('toDoList'))
+    if (toDOListFromPast) return toDOListFromPast
+    return []
+  }
+
+  const [toDoList, setToDoList] = useState([])
 
   const helpersStorageToDOList = (list) => {
     window.localStorage.setItem('toDoList', JSON.stringify(list))
@@ -24,14 +30,14 @@ const App = () => {
     ]
     if (text !== '') {
       setToDoList(newList)
-      helpersStorageToDOList(newList)
+      // helpersStorageToDOList(newList)
     }
   }
 
   const removeListItem = (id) => {
     const newList = toDoList.filter((element) => element.id !== id)
     setToDoList(newList)
-    helpersStorageToDOList(newList)
+    // helpersStorageToDOList(newList)
   }
 
   const changeListItemState = (id) => {
@@ -47,7 +53,7 @@ const App = () => {
     })
 
     setToDoList(newList)
-    helpersStorageToDOList(newList)
+    // helpersStorageToDOList(newList)
   }
 
   return (
