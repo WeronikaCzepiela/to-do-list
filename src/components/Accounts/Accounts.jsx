@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 export const Accounts = () => {
   const { t } = useTranslation()
+  console.log('ada')
 
   return (
     <div className={'accounts'}>
