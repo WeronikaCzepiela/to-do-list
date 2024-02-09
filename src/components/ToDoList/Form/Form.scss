@@ -20,22 +20,18 @@ button {
   border: none;
   margin-top: 25px;
   cursor: pointer;
-
   &:hover {
     background-color: $hower-button;
   }
-
   &:active {
     box-shadow: 0px 4px 4px 0px #00000040 inset;
     background-color: $active-button;
   }
 }
-
 #form {
   display: flex;
   flex-direction: column;
 }
-
 input {
   width: 534px;
   min-height: 66px;
@@ -51,7 +47,6 @@ input {
   resize: none;
   padding-left: 36px;
 }
-
 @media (max-width: 500px) {
   button {
     width: 320px;
@@ -59,7 +54,6 @@ input {
     font-size: 16px;
     margin-top: 15px;
   }
-
   input {
     width: 320px;
     min-height: 45px;
