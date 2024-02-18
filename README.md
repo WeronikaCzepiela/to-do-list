@@ -1,6 +1,6 @@
 # To Do List
 
-A web application that allows users to create their own task list.
+It's a web application that allows users to create their own task list.
 
 ## See the website
 
